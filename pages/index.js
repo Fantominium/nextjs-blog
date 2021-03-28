@@ -1,18 +1,23 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
+
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Create test</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
+        {/* image component that comes with Next out of the box */}
+        <Image src="/images/profile.jpg" width={"100"} height={"100"} alt="profile"/>
+        <br/>
         <h1 className="title">
           Read{' '}
           <Link href="/posts/first-post">
-            <a>Next.js!</a>
+            <a>first post</a>
           </Link>
         </h1>
 
