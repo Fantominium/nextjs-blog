@@ -34,11 +34,10 @@ export async function getStaticProps() {
 export default function Home({allPostsData}) {
   return (
     <Layout home>
-      {callSwapiPlanets()}
       <Head>
         <title>{siteTitle}</title>
       </Head>
-        <Content allPostsData={allPostsData}/>
+        <Content allPostsData={allPostsData} swapi={callSwapiPlanets()}/>
     </Layout>
   )
 }

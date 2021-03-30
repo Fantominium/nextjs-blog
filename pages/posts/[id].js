@@ -1,11 +1,13 @@
 import Layout from '../../components/layout'
-
+import Head from 'next/head'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 
 export default function Post({ postData }) {
     return (
       <Layout>
-        {postData.title}
+        <Head>
+            {postData.title}
+        </Head>
         <br />
         {postData.id}
         <br />
@@ -15,7 +17,7 @@ export default function Post({ postData }) {
       </Layout>
     )
   }
-  
+
 
 export async function getStaticPaths(){
     const paths = getAllPostIds()

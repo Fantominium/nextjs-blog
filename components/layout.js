@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Malcolm --'
+const name = 'Malcolm Garner' 
 export const siteTitle = 'Next.js Sample tesss'
 
 export default function Layout({ children, home }) {
@@ -27,37 +27,51 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         {home ? (
-          <>
+          <div className={styles.nav}>
             <Image
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
-              height={44}
-              width={44}
+              height={100}
+              width={100}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
+            <div className={styles.nav}>
+              <h1 className={utilStyles.headingXl}>{name}</h1>
+              <div className={styles.links}>
+                  <a href="https://github.com/Fantominium" className={styles.link}>GitHub</a>
+                <Link href="/">
+                  <a className={styles.link} href="/">About Me</a>
+                </Link>
+              </div>
+            </div>
+          </div>
         ) : (
-          <>
+          <div className={styles.nav}>
             <Link href="/">
               <a>
                 <Image
                   priority
                   src="/images/profile.jpg"
                   className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
+                  height={90}
+                  width={90}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <div className={styles.nav}>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <h1 className={utilStyles.headingLg}>{name}</h1>
               </Link>
-            </h2>
-          </>
+              <div className={styles.links}>
+                  <a href="https://github.com/Fantominium" className={styles.link}>GitHub</a>
+                <Link href="/">
+                  <a className={styles.link}>About Me</a>
+                </Link>
+              </div>
+            </div>
+          </div>
         )}
       </header>
       <main>{children}</main>
