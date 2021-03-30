@@ -7,5 +7,5 @@ Current progress in Next.js tutorial - https://nextjs.org/learn/basics/data-fetc
 
 https://strapi.io/ - after next.js
 
+this commit is for a continuous integration script test for the master branch
 
-****this commit is for a continuous integration script test for the master branch*****
