@@ -8,4 +8,4 @@ Current progress in Next.js tutorial - https://nextjs.org/learn/basics/data-fetc
 https://strapi.io/ - after next.js
 
 
-****this commit is for a continuous integration script test for the master branch*****
+At dynamic routes in the Next Js tutorial, with the addition of the [id].js page, that Next automatically takes for a dynamic route file. This allows for however many posts to be created and use the same format (which could use some sprucing up and such for my own posts).
