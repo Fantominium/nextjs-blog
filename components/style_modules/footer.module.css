@@ -1,0 +1,13 @@
+.footer {
+    background: #F8F8F8;
+    min-height: 150px;
+    /* padding-top: 2em; */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+.footer input {
+    margin-right: 1em;
+    margin-left: 1em;
+}

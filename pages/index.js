@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import Content from '../components/content'
+import FooterFormLogic from '../lib/FooterFormLogic'
 
 import { getSortedPostsData } from '../lib/posts'
 
@@ -38,6 +39,7 @@ export default function Home({allPostsData}) {
         <title>{siteTitle}</title>
       </Head>
         <Content allPostsData={allPostsData} swapi={callSwapiPlanets()}/>
+      <FooterFormLogic/>
     </Layout>
   )
 }
