@@ -34,25 +34,10 @@ export default function FooterForm (props) {
                         onChange={props.handleChange} 
                         placeholder="Email" 
                     />
-                    
-                    <input
-                        type="password" 
-                        name="password" 
-                        value={props.password} 
-                        onChange={props.handleChange} 
-                        placeholder="Password" 
-                    />
-                    
-                    <input 
-                        type="password"
-                        name="passwordConfirm" 
-                        value={props.passwordConfirm} 
-                        onChange={props.handleChange} 
-                        placeholder="Confirm Password" 
-                    />
+
                     <button>Submit</button>
                     <br/>
-                    <span style={{color:"red"}}>{props.validForm ? props.validForm : errMsg}</span>
+                    <span style={{color:"red"}}>{props.errors ? errMsg : ''}</span>
             </form>
         </div>
 
