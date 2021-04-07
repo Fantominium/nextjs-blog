@@ -14,7 +14,7 @@ export function callSwapiPlanets () {
   const fetcher = (...args) => fetch(...args).then(res => res.json())
   const { data, error } = useSWR(`https://swapi.dev/api/planets/${ Math.floor(Math.random()*10) }`, fetcher)
 
-  if (error) return <div>failed to load</div>
+  if (error) return <div>failed to load, error: {error}</div>
   if (!data) return <div>loading...</div>
 
   return <div>Hello from {data.name}!</div>
@@ -41,7 +41,7 @@ export default function Home({allPostsData}) {
         <title>{siteTitle}</title>
       </Head>
         <Content allPostsData={allPostsData} swapi={callSwapiPlanets()}/>
-      {/* <FooterFormLogic/> */}
+      <FooterFormLogic/>
     </Layout>
   )
 }

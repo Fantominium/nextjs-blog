@@ -1,9 +1,10 @@
 .footer {
     background: #F8F8F8;
-    min-height: 150px;
+    min-height: 100px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    width: 100%;
 }
 .footer input {
     margin-right: .5em;
@@ -17,5 +18,9 @@
 }
 
 @media (min-width: 1350px) {
-
+    .footer {
+        flex-flow: row nowrap;
+        justify-content: center;
+        padding-top: 2em;
+    }
 }
