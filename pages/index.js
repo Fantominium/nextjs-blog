@@ -12,12 +12,16 @@ import useSWR from 'swr'
 //personal test of the swr facility for client side data fetching for user specific pages ideally
 export function callSwapiPlanets () {
   const fetcher = (...args) => fetch(...args).then(res => res.json())
-  const { data, error } = useSWR(`https://swapi.dev/api/planets/${ Math.floor(Math.random()*10) }`, fetcher)
+
+  const rand = Math.floor(Math.random()*10)+1
+
+  const { data, error } = useSWR(`https://swapi.dev/api/people/${ rand }`, fetcher)
 
   if (error) return <div>failed to load, error: {error}</div>
   if (!data) return <div>loading...</div>
+  return <div>Hello, I'm {data.name ? data.name : 'Emporor Sheev Palpatine'}!</div>
 
-  return <div>Hello from {data.name}!</div>
+
 }
 
 
@@ -40,7 +44,8 @@ export default function Home({allPostsData}) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-        <Content allPostsData={allPostsData} swapi={callSwapiPlanets()}/>
+        {callSwapiPlanets()}
+        <Content allPostsData={allPostsData}/>
       <FooterFormLogic/>
     </Layout>
   )
