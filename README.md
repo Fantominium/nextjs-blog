@@ -7,6 +7,16 @@ Current progress in Next.js tutorial - https://nextjs.org/learn/basics/data-fetc
 
 https://strapi.io/ - after next.js
 
-this commit is for a continuous integration script test for the master branch
+TODO:
+ - FooterForm cleanup (both in render and lib )
 
-At dynamic routes in the Next Js tutorial, with the addition of the [id].js page, that Next automatically takes for a dynamic route file. This allows for however many posts to be created and use the same format (which could use some sprucing up and such for my own posts).
+
+
+Added the api routes folder labelled  "api" under pages.
+Each file in the folder, acts as a simple node api.
+
+tutorial - They can be deployed as Serverless Functions (also known as Lambdas). 
+Malcolm - Bumboclat...
+
+Will finish the api routes section in the tutorial, then next topic is deployment. 
+I want to do the deployment purely with github actions.
