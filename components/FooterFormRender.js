@@ -12,8 +12,8 @@ export default function FooterForm (props) {
         }, [props.errors, props.validForm]
     )
     return (
-        <div class="footer">
-            <form onSubmit={props.handleSubmit}>
+        <div className="footer">
+            <form className="footer--form" onSubmit={props.handleSubmit}>
                     <input 
                         name="firstName" 
                         value={props.firstName} 

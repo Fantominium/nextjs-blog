@@ -1,13 +1,21 @@
 .footer {
     background: #F8F8F8;
     min-height: 150px;
-    /* padding-top: 2em; */
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    /* align-items: center; */
 }
 .footer input {
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+.footer--form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 100px;
+}
+
+@media (min-width: 1350px) {
+
 }
