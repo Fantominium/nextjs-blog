@@ -6,7 +6,6 @@ export default function Content(props){
     return(
       <>
           <section className={utilStyles.headingMd + ' ' + innerContent.container} >
-          <p>{props.swapi}</p>
           <p>I like React and node</p>
           <p>
             Checkout my github {' '}
