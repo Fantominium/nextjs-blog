@@ -7,6 +7,11 @@ const cors = initLogicCors(
   })
 )
 
+/**
+ * Set up Nodemailer in this api to send the data across in an email. 
+ * API WORKS!!!!
+ */
+
 
 export default async function handler(req, res) {
 
