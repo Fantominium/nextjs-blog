@@ -8,15 +8,8 @@ Current progress in Next.js tutorial - https://nextjs.org/learn/basics/data-fetc
 https://strapi.io/ - after next.js
 
 TODO:
- - FooterForm cleanup (both in render and lib )
+ - Nodemailer setting up as an api route. 
+ - need to allow less secure emails on my gmail to set up with gmail.
 
 
 
-Added the api routes folder labelled  "api" under pages.
-Each file in the folder, acts as a simple node api.
-
-tutorial - They can be deployed as Serverless Functions (also known as Lambdas). 
-Malcolm - Bumboclat...
-
-Will finish the api routes section in the tutorial, then next topic is deployment. 
-I want to do the deployment purely with github actions.
