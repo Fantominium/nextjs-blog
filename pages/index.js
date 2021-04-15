@@ -15,11 +15,11 @@ export function callSwapiPlanets () {
 
   const rand = Math.floor(Math.random()*10)+1
 
-  const { data, error } = useSWR(`https://swapi.dev/api/people/${ rand }`, fetcher)
+  // const { data, error } = useSWR(`https://swapi.dev/api/people/${ rand }`, fetcher)
 
-  if (error) return <div>failed to load, error: {error}</div>
-  if (!data) return <div>loading...</div>
-  return <div>Hello, I'm {data.name ? data.name : 'Emporor Sheev Palpatine'}!</div>
+  // if (error) return <div>failed to load, error: {error}</div>
+  // if (!data) return <div>loading...</div>
+  // return <div>Hello, I'm {data.name ? data.name : 'Emporor Sheev Palpatine'}!</div>
 
 
 }

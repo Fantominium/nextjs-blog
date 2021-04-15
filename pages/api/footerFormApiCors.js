@@ -3,7 +3,7 @@ import initLogicCors from "../../lib/initLogicCors"
 import sgMail from '@sendgrid/mail'
 
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const cors = initLogicCors(
   Cors({
@@ -12,8 +12,8 @@ const cors = initLogicCors(
 )
 
 /**
- * Set up Nodemailer in this api to send the data across in an email. 
- * API WORKS!!!!
+ * Using Sendgrid in this api to send the data across in an email. 
+ * api key needs to be renewed
  */
 
 async function testSend(a, b, c) {
@@ -25,15 +25,15 @@ async function testSend(a, b, c) {
     html: `<strong>Hi Malcolm, mailer api here. ${a} ${b} wishes to contact you. Their email address is ${c}</strong>`
   }
 
-  try {
-    await sgMail.send(msg);
-  } catch (error) {
-    console.error(error);
+  // try {
+  //   await sgMail.send(msg);
+  // } catch (error) {
+  //   console.error(error);
 
-    if (error.response) {
-      console.error(error.response.body)
-    }
-  }
+  //   if (error.response) {
+  //     console.error(error.response.body)
+  //   }
+  // }
 }
 
 export default async function handler(req, res) {
@@ -47,9 +47,10 @@ export default async function handler(req, res) {
 
   if (firstName && lastName && email) {
     res.status(200).json({ 
-      Status: "success"
+      status: "success",
+      code: "200"
     })
-    testSend(firstName,lastName,email)
+    // testSend(firstName,lastName,email)
   }
 
 
