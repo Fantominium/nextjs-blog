@@ -7,8 +7,8 @@ Current progress in Next.js tutorial - https://nextjs.org/learn/basics/data-fetc
 
 https://strapi.io/ - after next.js
 
-
+DONE: clearing form input
 TODO:
-
-Was able to send an email from the api upon clicking the submit button with form values. 
-The form values came back in an email completely readable. 
+ - Write tests around what is rendered in the DOM!
+ - Write tests for the form fields
+ - write test for the api call 
