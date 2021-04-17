@@ -10,7 +10,7 @@ https://strapi.io/ - after next.js
 DONE: clearing form input
 TODO:
  - Write tests around what is rendered in the DOM!
- - Write tests for the form fields - ######in progress
+ - Write tests for the form fields - **in progress**
  - write test for the api call 
 
 Also to do on server side: 
