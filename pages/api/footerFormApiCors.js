@@ -7,7 +7,10 @@ import sgMail from '@sendgrid/mail'
 
 const cors = initLogicCors(
   Cors({
-    methods:['POST','GET','OPTIONS'],
+    methods:['POST','GET','OPTIONS'],  
+    // origin: "*",
+    // preflightContinue: false,
+    // optionsSuccessStatus: 204
   })
 )
 
@@ -46,7 +49,13 @@ export default async function handler(req, res) {
   const {firstName, lastName, email} = {...data}
 
   if (firstName && lastName && email) {
-    res.status(200).json({ 
+    
+    // ({
+    //   "Content-Type": "Application/json",
+    //   "Access-Control-Allow-Origin": "*"
+
+    // })
+    return res.status(200).json({
       status: "success",
       code: "200"
     })

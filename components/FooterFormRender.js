@@ -15,6 +15,7 @@ export default function FooterForm (props) {
         <div className="footer">
             <form className="footer--form" onSubmit={props.handleSubmit}>
                     <input 
+                        id="firstName"
                         name="firstName" 
                         value={props.firstName} 
                         onChange={props.handleChange} 
@@ -22,6 +23,7 @@ export default function FooterForm (props) {
                     />
                     
                     <input 
+                        id="lastName"
                         name="lastName" 
                         value={props.lastName} 
                         onChange={props.handleChange} 
@@ -29,13 +31,14 @@ export default function FooterForm (props) {
                     />
                     
                     <input 
+                        id="email"
                         name="email" 
                         value={props.email} 
                         onChange={props.handleChange} 
                         placeholder="Email" 
                     />
 
-                    <button>Submit</button>
+                    <button id="submit">Submit</button>
                     <br/>
                     <span style={{color:"red"}}>{props.errors ? errMsg : ''}</span>
             </form>
