@@ -16,3 +16,6 @@ TODO:
 Also to do on server side: 
  - look up how to write reponse headers properly, I remember seeing it before when learning node js 
  - start here https://www.w3schools.com/nodejs/nodejs_http.asp
+
+Client side: 
+ - reneder a message for successful form submission and have it dissapear after a few seconds
