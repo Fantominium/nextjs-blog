@@ -49,20 +49,19 @@ export default async function handler(req, res) {
   const {firstName, lastName, email} = {...data}
 
   if (firstName && lastName && email) {
-    
-    // ({
-    //   "Content-Type": "Application/json",
-    //   "Access-Control-Allow-Origin": "*"
 
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Content-Type', 'Application/json')
+    res.setHeader('Access-Control-Request-Method', '*')
+    res.setHeader('Access-Control-Allow-Headers', '*')
     // })
     return res.status(200).json({
       status: "success",
       code: "200"
     })
-    // testSend(firstName,lastName,email)
   }
 
 
 
-  res.end()
+  res.send()
 }

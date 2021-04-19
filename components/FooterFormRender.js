@@ -4,11 +4,20 @@ import { red } from 'ansi-colors';
 
 export default function FooterForm (props) {
     let [errMsg, setErrMsg] = useState('')
+    let [successMsg, setSuccessMsg] = useState("")
     useEffect(
         ()=> {
-            if(props.errors[0] !== 'undefined') {
-                setErrMsg(props.errors[0]) 
+            if(props.errors[0] !== 'undefined' && props.errors[0]) {
+                setErrMsg(props.errors[0])
+                setSuccessMsg("") 
+
+            } else {
+                if(props.validForm) {
+                    setSuccessMsg("sent successfully")
+                    setErrMsg("")
+                }
             }
+
         }, [props.errors, props.validForm]
     )
     return (
@@ -40,7 +49,8 @@ export default function FooterForm (props) {
 
                     <button id="submit">Submit</button>
                     <br/>
-                    <span style={{color:"red"}}>{props.errors ? errMsg : ''}</span>
+                    <span id="failMsg" style={{color:"red"}}>{props.errors ? errMsg : ''}</span>
+                    <span id="sucMsg" style={{color:"green"}}>{successMsg ? successMsg : ''}</span>
             </form>
         </div>
 
