@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { red } from 'ansi-colors';
+import style from './style_modules/footer.module.css'
 
 
 export default function FooterForm (props) {
@@ -21,8 +22,8 @@ export default function FooterForm (props) {
         }, [props.errors, props.validForm]
     )
     return (
-        <div className="footer">
-            <form className="footer--form" onSubmit={props.handleSubmit}>
+        <div className={style.footer}>
+            <form className={style.footerForm} onSubmit={props.handleSubmit}>
                     <input 
                         id="firstName"
                         name="firstName" 

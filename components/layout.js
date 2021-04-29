@@ -37,11 +37,11 @@ export default function Layout({ children, home }) {
               alt={name}
             />
             <div className={styles.nav}>
-              <h1 className={utilStyles.headingXl}>{name}</h1>
+              <h1 className={utilStyles.headingXl +' '+ styles.headerTitle}>{name}</h1>
               <div className={styles.links}>
                   <a href="https://github.com/Fantominium" className={styles.link}>GitHub</a>
-                <Link href="/">
-                  <a className={styles.link} href="/">About Me</a>
+                <Link href="/aboutme">
+                  <a className={styles.link}>About Me</a>
                 </Link>
               </div>
             </div>
@@ -74,9 +74,9 @@ export default function Layout({ children, home }) {
           </div>
         )}
       </header>
-      <main>{children}</main>
+      <main id={styles.main}>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div className={styles.backToHome + ' ' + styles.footer}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>

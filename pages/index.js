@@ -39,14 +39,26 @@ export async function getStaticProps() {
 
 
 export default function Home({allPostsData}) {
-  return (
+  return (<>
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
         {callSwapiPlanets()}
         <Content allPostsData={allPostsData}/>
-      <FooterFormLogic/>
+        <FooterFormLogic/>
     </Layout>
+    <style global jsx>{`
+      @media (min-width: 1350px) {
+        html,
+        body,
+        body > div:first-child,
+        div#__next,
+        div#__next > div {
+          height: 100%;
+        }
+      }
+    `}</style>
+    </>
   )
 }
