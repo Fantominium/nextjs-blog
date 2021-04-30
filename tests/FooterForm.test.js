@@ -1,13 +1,13 @@
 import {render, fireEvent} from "@testing-library/react"
 import puppeteer from "puppeteer"
-// import FooterFormRender from "../lib/FooterFormLogic"
+import FooterFormRender from "../lib/FooterFormLogic"
 // import app from "../pages/_app"
 
-// it('should render correctly', () => {
-//     const {queryByPlaceholderText} = render(<FooterFormRender/>)
-//     const firstName = queryByPlaceholderText("First Name")
-//     expect(firstName).toBeTruthy()
-// });
+it('should render correctly', () => {
+    const {queryByPlaceholderText} = render(<FooterFormRender/>)
+    const firstName = queryByPlaceholderText("First Name")
+    expect(firstName).toBeTruthy()
+});
 
 describe('Puppeteer tests', () => {
 

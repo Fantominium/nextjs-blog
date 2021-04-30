@@ -28,4 +28,4 @@ https://strapi.io/ - after next.js
 # Client side TODO: 
  - reneder a message for successful form submission and have it dissapear after a few seconds
  - when an error occurs, and it is then cleared, the submit button needs to be clicked **twice**; once to get rid of error message, the other to submit form and clear fields
- - create your own react component for an aboutme page.
+ - create your own react/ts component for an aboutme page. **in progress**

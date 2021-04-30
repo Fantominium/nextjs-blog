@@ -56,13 +56,13 @@ export default function Layout({ children, home }) {
                   className={utilStyles.borderCircle}
                   height={90}
                   width={90}
-                  alt={name}
+                  alt="Back to Home"
                 />
               </a>
             </Link>
             <div className={styles.nav}>
               <Link href="/">
-                <h1 className={utilStyles.headingLg}>{name}</h1>
+                <h1 className={utilStyles.headingLg+ " " + styles.headerTitle}>{name}</h1>
               </Link>
               <div className={styles.links}>
                   <a href="https://github.com/Fantominium" className={styles.link}>GitHub</a>

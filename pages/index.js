@@ -48,17 +48,6 @@ export default function Home({allPostsData}) {
         <Content allPostsData={allPostsData}/>
         <FooterFormLogic/>
     </Layout>
-    <style global jsx>{`
-      @media (min-width: 1350px) {
-        html,
-        body,
-        body > div:first-child,
-        div#__next,
-        div#__next > div {
-          height: 100%;
-        }
-      }
-    `}</style>
     </>
   )
 }
