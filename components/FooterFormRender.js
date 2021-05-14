@@ -1,7 +1,39 @@
 import React, {useState, useEffect} from 'react'
 import { red } from 'ansi-colors';
-import style from './style_modules/footer.module.css'
+import styled from 'styled-components'
 
+//make this a styled component to get arount TypeError?
+
+const Footer = styled.div`
+    background: rgba(248, 248, 248, 0.292);
+    min-height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    input {
+        margin-right: .5em;
+        margin-left: .5em;
+    }
+    @media (min-width: 1350px) {
+        flex-flow: row nowrap;
+        justify-content: center;
+        padding-top: 2em;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+`
+const FooterFormStyle = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 100px;
+    margin: 1em;
+
+`
+ 
 
 export default function FooterForm (props) {
     let [errMsg, setErrMsg] = useState('')
@@ -22,8 +54,9 @@ export default function FooterForm (props) {
         }, [props.errors, props.validForm]
     )
     return (
-        <div className={style.footer}>
-            <form className={style.footerForm} onSubmit={props.handleSubmit}>
+        <Footer>
+            <form onSubmit={props.handleSubmit}>
+                <FooterFormStyle>
                     <input 
                         id="firstName"
                         name="firstName" 
@@ -52,8 +85,9 @@ export default function FooterForm (props) {
                     <br/>
                     <span id="failMsg" style={{color:"red"}}>{props.errors ? errMsg : ''}</span>
                     <span id="sucMsg" style={{color:"green"}}>{successMsg ? successMsg : ''}</span>
+                </FooterFormStyle>
             </form>
-        </div>
+        </Footer>
 
     )
 }

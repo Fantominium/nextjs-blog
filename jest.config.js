@@ -4,7 +4,6 @@ module.exports = {
     setupFilesAfterEnv: ["<rootDir>/test_setup/setupTests.js"],
     transform: {
       "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-      '^.+\\.+js$': require.resolve('./test_setup/custom-transform')
+      "\\.(css|less|scss|sass|module.css)$": "identity-obj-proxy"
     }
   };
