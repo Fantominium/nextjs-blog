@@ -11,6 +11,7 @@ https://strapi.io/ - after next.js
 ### DONE: Write tests around what is rendered in the DOM! 
 ### DONE: TypeError: Jest: a transform must export a `process` function. (make this a styled component to get around TypeError? **correct**)
 ### DONE: Write tests for the form fields 
+### DONE: reneder a message for successful form submission and have it dissapear after a few seconds
 
 #### TODO:
  - attach tests to integration script to be run in github actions (After writing unit, and integration tests)
@@ -28,6 +29,6 @@ https://strapi.io/ - after next.js
  - learn to use reducer
   
 # Client side TODO: 
- - reneder a message for successful form submission and have it dissapear after a few seconds
  - when an error occurs, and it is then cleared, the submit button needs to be clicked **twice**; once to get rid of error message, the other to submit form and clear fields
  - create your own react/ts component for an aboutme page. **in progress**
+ - fade error/success messages

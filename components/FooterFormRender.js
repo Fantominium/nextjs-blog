@@ -51,7 +51,20 @@ export default function FooterForm (props) {
                 }
             }
 
+
         }, [props.errors, props.validForm]
+    )
+    useEffect (
+        () => {
+            const intervalID = setInterval(() => {
+                setSuccessMsg("")
+                setErrMsg("")
+            }, 3000)
+
+            return () => {
+                clearInterval(intervalID)
+            }
+        }, [errMsg, successMsg]
     )
     return (
         <Footer>
