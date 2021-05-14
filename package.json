@@ -5,12 +5,50 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest --coverage"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.4.2",
+    "ansi-colors": "^4.1.1",
+    "cors": "^2.8.5",
+    "date-fns": "^2.19.0",
+    "gray-matter": "^4.0.2",
     "next": "^10.0.0",
+    "nodemailer": "^6.5.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "sass": "^1.32.8"
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
+    "sass": "^1.32.8",
+    "styled-components": "^5.3.0",
+    "swr": "^0.5.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@testing-library/dom": "^7.30.3",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@types/node": "^15.0.1",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-styled-components": "^1.12.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "jest-dom": "^4.0.0",
+    "jest-mock-fetch": "^1.0.9",
+    "puppeteer": "^8.0.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   }
 }

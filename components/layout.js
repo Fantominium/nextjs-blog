@@ -4,8 +4,8 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Malcolm --'
-export const siteTitle = 'Next.js Sample tesss'
+const name = 'Malcolm Garner' 
+export const siteTitle = 'Malcolm Garner - React Developer'
 
 export default function Layout({ children, home }) {
   return (
@@ -27,42 +27,56 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         {home ? (
-          <>
+          <div className={styles.nav}>
             <Image
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
-              height={44}
-              width={44}
+              height={100}
+              width={100}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
+            <div className={styles.nav}>
+              <h1 className={utilStyles.headingXl +' '+ styles.headerTitle}>{name}</h1>
+              <div className={styles.links}>
+                  <a href="https://github.com/Fantominium" className={styles.link}>GitHub</a>
+                <Link href="/aboutme">
+                  <a className={styles.link}>About Me</a>
+                </Link>
+              </div>
+            </div>
+          </div>
         ) : (
-          <>
+          <div className={styles.nav}>
             <Link href="/">
               <a>
                 <Image
                   priority
                   src="/images/profile.jpg"
                   className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
+                  height={90}
+                  width={90}
+                  alt="Back to Home"
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <div className={styles.nav}>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <h1 className={utilStyles.headingLg+ " " + styles.headerTitle}>{name}</h1>
               </Link>
-            </h2>
-          </>
+              <div className={styles.links}>
+                  <a href="https://github.com/Fantominium" className={styles.link}>GitHub</a>
+                <Link href="/">
+                  <a className={styles.link}>About Me</a>
+                </Link>
+              </div>
+            </div>
+          </div>
         )}
       </header>
-      <main>{children}</main>
+      <main id={styles.main}>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div className={styles.backToHome + ' ' + styles.footer}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
